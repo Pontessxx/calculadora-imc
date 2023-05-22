@@ -15,10 +15,18 @@ form.addEventListener('submit', function(event){
 
     if(imc < 18.5){
         description = 'Você está abaixo do peso. Entre em contato com uma nutricionista.';
-    } else {
-        // Adicione outras faixas de IMC e descrições de acordo com sua necessidade
+    } else if (imc>=18.5 && imc <=25){
+        description = 'Peso ideal, parabéns!'
+    }else if (imc> 25 && imc<=30){
+        description = 'voce esta acima do peso! procure contato com nutricionistas/medicos.'
+    }else if (imc> 30 && imc<=25){
+        description = 'Obesidade Moderada! procure contato com nutricionistas/medicos.'
+    }else if (imc> 35 && imc<=40){
+        description = 'Obesidade severa! procure contato com nutricionistas/medicos.'
+    }else{
+        description = 'Obesidade estágio final, procure um medico'
     }
 
-    value.textContent = imc;
+    value.textContent = imc.replace('.', ',');
     document.getElementById('description').textContent = description;
 });
