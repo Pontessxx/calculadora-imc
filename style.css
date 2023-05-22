@@ -21,7 +21,7 @@ body{
 #img img{
     width: 32rem;
 }
-#calculater{
+#calculator{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -57,8 +57,30 @@ body{
 .input-field{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #3f3f46;
     padding: 0.3rem;
     border-radius: 3px;
+    margin-top: 3px;
+}
+.input-field span,
+.input-field i {
+    color: #cbd5e1;
+    font-size: 1.3rem;
+    padding: 0.3rem 1rem;
+}
+.input-field input{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #f8fafc;
+    padding: 0.5rem;
+}
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button{
+    appearance: none;
+}
+.input-field input:focus{
+    outline: none;
 }
