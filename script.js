@@ -10,5 +10,5 @@ form.addEventListener('submit', function(event){
     const imc = (weight/ (height * height)).toFixed(2);
     const value = document.getElementById('value');
     let description = '';
-    
+    document.getElementById('infos').classList.remove('hidden');
 })
