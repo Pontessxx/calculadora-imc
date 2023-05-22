@@ -1,22 +1,24 @@
 const form = document.getElementById('form');
 
 form.addEventListener('submit', function(event){
-    //impede que a pagina recarregue o form
     event.preventDefault();
 
-    const weight = document.getElementById('weight').value; //pega o valor do input
-    const height = document.getElementById('height').value.replace(',', '.'); //pega o valor do input
+    const weight = parseFloat(document.getElementById('weight').value);
+    const height = parseFloat(document.getElementById('height').value);
 
     const imc = (weight / (height * height)).toFixed(2);
-    const valor = document.getElementById('value');
+    const value = document.getElementById('value');
 
     let description = '';
 
     document.getElementById('infos').classList.remove('hidden');
 
     if(imc < 18.5){
-        description = 'Voce está abaixo do peso, entrar em contato com uma nutricionista'
+        description = 'Você está abaixo do peso. Entre em contato com uma nutricionista.';
+    } else {
+        // Adicione outras faixas de IMC e descrições de acordo com sua necessidade
     }
-    valor.textContent = imc
+
+    value.textContent = imc;
     document.getElementById('description').textContent = description;
-})
+});
