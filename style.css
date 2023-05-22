@@ -132,3 +132,6 @@ body{
 #more_info a:hover{
     color: #cbd5e1;
 }
+.hidden{
+    display: none;
+}
