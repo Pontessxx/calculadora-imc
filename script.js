@@ -10,21 +10,27 @@ form.addEventListener('submit', function(event){
     const value = document.getElementById('value');
 
     let description = '';
-
+    
     document.getElementById('infos').classList.remove('hidden');
 
     if(imc < 18.5){
         description = 'Você está abaixo do peso. Entre em contato com uma nutricionista.';
+        value.classList.add('medium')
     } else if (imc>=18.5 && imc <=25){
         description = 'Peso ideal, parabéns!'
+        value.classList.add('normal')
     }else if (imc> 25 && imc<=30){
         description = 'voce esta acima do peso! procure contato com nutricionistas/medicos.'
+        value.classList.add('attention')
     }else if (imc> 30 && imc<=25){
         description = 'Obesidade Moderada! procure contato com nutricionistas/medicos.'
+        value.classList.add('attention')
     }else if (imc> 35 && imc<=40){
         description = 'Obesidade severa! procure contato com nutricionistas/medicos.'
+        value.classList.add('attention')
     }else{
         description = 'Obesidade estágio final, procure um medico'
+        value.classList.add('attention')
     }
 
     value.textContent = imc.replace('.', ',');
