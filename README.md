@@ -1,6 +1,7 @@
 # calculadora-imc
 
 Esta é uma página simples de uma calculadora de Índice de Massa Corporal (IMC), desenvolvida usando HTML, CSS e JavaScript. O IMC é uma medida que estima a quantidade de gordura corporal de uma pessoa com base em seu peso e altura. Esta calculadora permite que os usuários insiram seu peso e altura e obtenham seu IMC calculado instantaneamente.
+
 <img src="./img/readme-image.png" alt="" srcset="">
 ## Recursos e Funcionalidades
 
